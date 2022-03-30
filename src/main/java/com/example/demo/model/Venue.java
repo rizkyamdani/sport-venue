@@ -29,4 +29,5 @@ public class Venue extends UserDateAudit {
     @Column(name = "venue_phone_number")
     private String phoneNumber;
 
+
 }

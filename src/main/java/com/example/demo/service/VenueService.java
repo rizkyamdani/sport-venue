@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VenueService {
@@ -43,5 +44,20 @@ public class VenueService {
         venue.setEmail(request.getEmail());
         venue.setPhoneNumber(request.getPhoneNumber());
         repository.save(venue);
+    }
+
+    public Venue getDataById(Long id) {
+        Optional<Venue> dataVenue = repository.findById(id);
+        Venue venue = new Venue();
+
+       dataVenue.ifPresentOrElse(venue1 -> {
+           venue.setId(venue1.getId());
+           venue.setName(venue1.getName());
+           venue.setAddress(venue1.getAddress());
+           venue.setEmail(venue1.getEmail());
+           venue.setPhoneNumber(venue1.getPhoneNumber());
+       }, () -> {});
+
+       return venue;
     }
 }

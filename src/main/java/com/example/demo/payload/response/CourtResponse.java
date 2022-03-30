@@ -1,18 +1,16 @@
-package com.example.demo.payload.request;
+package com.example.demo.payload.response;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 
-@Setter
 @Getter
-public class CourtRequest implements Serializable {
+@Setter
+public class CourtResponse implements Serializable {
+    private Long id;
     private String name;
     private Integer price;
     private Byte number;
-    private Long courtTypeId;
-    private Long venueId;
-
-
+    private String courtType;
 }
