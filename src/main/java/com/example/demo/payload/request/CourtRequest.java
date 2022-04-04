@@ -12,7 +12,5 @@ public class CourtRequest implements Serializable {
     private Integer price;
     private Byte number;
     private Long courtTypeId;
-    private Long venueId;
-
-
+    private String venueId;
 }

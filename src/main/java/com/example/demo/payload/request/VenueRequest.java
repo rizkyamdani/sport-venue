@@ -12,4 +12,5 @@ public class VenueRequest implements Serializable {
     private String address;
     private String email;
     private String phoneNumber;
+    private Long venueTypeId;
 }

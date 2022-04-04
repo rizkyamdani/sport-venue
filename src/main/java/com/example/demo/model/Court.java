@@ -17,8 +17,7 @@ import javax.persistence.*;
 public class Court extends UserDateAudit {
     @Id
     @Column(name = "court_id")
-    @GeneratedValue (strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
     @Column(name = "court_name")
     private String name;
@@ -29,6 +28,11 @@ public class Court extends UserDateAudit {
     @Column(name = "court_number")
     private Byte number;
 
+    @Column(name = "is_booked")
+    private Boolean isBooked;
+
+    @Column(name = "deactivated")
+    private Boolean deactivated;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "court_type_id", nullable = false)

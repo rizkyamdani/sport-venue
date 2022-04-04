@@ -18,6 +18,4 @@ public class CourtType extends UserDateAudit {
 
     @Column(name = "court_type_name")
     private String name;
-
-
 }

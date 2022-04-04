@@ -29,7 +29,7 @@ public class CourtController {
 
     @PostMapping
 
-    public ResponseEntity addData(@RequestBody CourtRequest request){
+    public ResponseEntity addData(@RequestBody CourtRequest request) throws JsonProcessingException {
         service.addDataCourt(request);
         return new ResponseEntity("SUCCESS" , HttpStatus.CREATED);
     }

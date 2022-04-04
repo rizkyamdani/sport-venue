@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.CourtType;
 import com.example.demo.payload.request.CourtTypeRequest;
 import com.example.demo.service.CourtTypeService;
 import org.springframework.http.HttpStatus;

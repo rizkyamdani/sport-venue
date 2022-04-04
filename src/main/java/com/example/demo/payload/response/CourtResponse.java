@@ -4,11 +4,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-
 @Getter
 @Setter
 public class CourtResponse implements Serializable {
-    private Long id;
+    private String id;
     private String name;
     private Integer price;
     private Byte number;
